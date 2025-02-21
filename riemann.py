@@ -13,8 +13,9 @@ def trapezoid(x_values: np.ndaraay, func: np.ufunc):
     return np.sum(areas)
 
 def simpson(x_values: np.ndarray, func: np.ufunc):
+    n = len(x_values) - 1 #Subintervals
     Sum = 0
-    for i in range(0, len(x_values -2, 2)): #Step size 2
+    for i in range(0, n, 2)): #Step size 2
         a, b, c = x_values[i], x_values[i+1], x_values[i+2]
         h = (c-a) / 2 #Half interval
 
