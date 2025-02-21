@@ -17,6 +17,6 @@ def get_cartesian_coordinates(triangle_coordinates: np.ndarray, bar_coordinates:
     return np.dot(triangle_coordinates, bar_coordinates)
 
 def is_inside_triangle(triangle_coordinates: np.ndarray, point_coordinates: np.ndarray) ->np.ndarray:
-  bar_coordinates = get_bar_coordinates(triangle_coordinates, point_coordinates)
+  bar_coordinates = get_barycentric_coordinates(triangle_coordinates, point_coordinates)
   return np.all(bar_coordinates >= 0)
 
