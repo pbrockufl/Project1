@@ -1,6 +1,6 @@
 import numpy as np
 
-def get_bar_coordinates(triangle_coordinates: np.ndarray, point_coordinates: np.ndarray) -> np.ndarray:
+def get_barycentric_coordinates(triangle_coordinates: np.ndarray, point_coordinates: np.ndarray) -> np.ndarray:
     x1, x2, x3 = triangle_coordinates[0]
     y1, y2, y3 = triangle_coordinates[1]
     x, y = point_coordinates
